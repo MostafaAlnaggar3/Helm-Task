@@ -5,7 +5,7 @@ docker image for python app:
 
 ![Untitled](Helm%20Task%20155db36e2fd04790adf64770eb74ad17/Untitled.png) 
 
-<br />to push the image to docker hub:
+to push the image to docker hub:
 
 ```bash
 # make a new tag to the image
@@ -13,7 +13,6 @@ docker tag python-app mnaggar3396/python-app
 # push it 
 docker push mnaggar3396/python-app
 ```
-<br />
 
 ---
 
@@ -22,7 +21,6 @@ create a new helm chart:
 ```bash
 helm create python-app
 ```
-<br />
 
 to create a new release:
 
@@ -30,24 +28,21 @@ to create a new release:
 heml install python-app-release python-app/
 ```
 
-<br />
 
 check deployments, services and helm releases:
 
 ![Untitled](Helm%20Task%20155db36e2fd04790adf64770eb74ad17/Untitled%201.png)
 
 
-<br />
 to get python-app service ip:
 
 ```bash
 minikube service python-app-svc --url
 ```
-<br />
+
 
 ![Untitled](Helm%20Task%20155db36e2fd04790adf64770eb74ad17/Untitled%202.png)
 
-<br />
 
 ---
 
