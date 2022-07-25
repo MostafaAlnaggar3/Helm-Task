@@ -1,0 +1,16 @@
+kind: Deployment
+
+pythonDeployName: python-app
+pythonImage: mnaggar3396/python-app
+pytonContainerPort: 8000
+pythonSVC: python-app-svc
+pythonSvcType: NodePort
+pythonSvcNodePort: 30333
+
+replicas: 1
+
+redisDeployName: redis-python-app
+redisImage: redis:5.0-alpine
+redisPort: 6379
+redisHost: redis
+redisSVC: redis

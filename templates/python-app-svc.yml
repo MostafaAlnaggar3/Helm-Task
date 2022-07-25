@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: {{ .Values.pythonSVC }}
+  
+spec:
+  type: {{ .Values.pythonSvcType }}
+
+  selector:
+    app: {{ .Values.pythonDeployName }}
+
+  ports:
+  - port: {{ .Values.pytonContainerPort }}
+    targetPort: {{ .Values.pytonContainerPort }}
+    nodePort: {{ .Values.pythonSvcNodePort }}
